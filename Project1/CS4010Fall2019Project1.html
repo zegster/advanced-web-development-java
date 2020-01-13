@@ -1,0 +1,183 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>CS4010 Fall 2019: Project 1. Provide a Computing Service</title>
+        <style type="text/css">
+            body {
+                color: #333333;
+                margin: 0 auto;
+                font-size: 1em;
+                font-family: Verdana, "Verdana CE",  Arial, "Arial CE", "Lucida Grande CE", lucida, "Helvetica CE", sans-serif;
+                text-align: center;
+            }
+            h1 {
+                font-size: 1.6em;
+                color: #333;
+                font-weight : normal;
+                padding:10px;
+                margin: 20px 10px 10px 0px;
+                text-align:center;
+            }
+            h2 {
+                font-size: 1.3em;
+                color: black;
+                font-weight : normal;
+                padding:5px 0px 2px 0px;
+                margin:0px 0px 5px 0px;
+                border-bottom:1px solid #D1d1d1;
+                text-align:left;
+            }
+            .baseFont {
+                font-size: 1.1em;
+                font-family: helvetica, arial, sans-serif;
+            }
+            .linegap1 {
+                line-height: 180%
+            }
+            .indent {
+                position: relative;
+                left: 1em;
+                width: 45em;
+            }
+            .ht1 {
+                height: 4em;
+            }
+            .ht1a {
+                height: 1em;
+            }
+            .inframe {
+                border: 2px solid;
+                position:relative;
+                margin: 0 auto;
+                top: 5px;
+                color: black;
+                border-color: #00BFFF;
+                width: 50em;
+                display: block;
+                padding: 1.5em;
+                text-align: left;
+                background-color: #FFF;
+            }
+            pre {
+                background-color:#FFF8E4;
+                padding:10px;
+                font-size: 1.3em;
+                _font-size: 1.2em;
+            }
+            pre,samp,code,tt {
+                font-family: "Courier New", monospace;
+                font-size:1.1em;
+                color:black;
+            }
+            .examplecode  {
+                background-color:#FFF8E4;
+                overflow:auto;
+                width:95%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="inframe baseFont linegap1">
+            <h1>Project 1. Provide a Computing Service</h1>
+			<center>(Due 10/13/2019 Sunday)</center>
+            <table>
+                <tr><td class="ht1a">&nbsp;</td></tr>
+            </table>
+                <p></p>
+                <p></p>
+                <h2>Description</h2>
+                <p></p>
+                <p></p>
+				<div class="indent linegap1">
+                    In this project, you will practice some basic features of the servlet technology and the JSP
+					technology. Since this is the first project of this semester, we use a simple structure for 
+					this web application. The structure of the web application is as follows:<p></p>
+					<ul>
+					   <li>A JSP page is used for the user's interface (two versions: Windows and Mac).</li>
+					   <li>A servlet is used to provide the core computing service.</li>
+					   <li>Another JSP page is used to display the computation result.</li>
+					   <li>A preparation servlet may be needed to retrieve some initial data from the <tt>web.xml</tt>,
+					   so that the first JSP page can display it as a UI component.</li>
+					</ul>
+					<p></p>
+                    <p></p>
+					The web application is used to run a business to sell a product in several cities. So the city information
+					including the tax rates will be used to calculate the final prices of the product. The city information
+					can be configured in an XML file, so that a non-Java programmer can change it easily.
+				</div>
+				<p></p>
+                <p></p>
+                <h2>Requirements</h2>
+                <p></p>
+				<ol>
+				   <li>When the web application starts, the welcome file <i>redirects</i> the request to a servlet to prepare
+				    for the initial data.</li>
+					<p></p>
+					<li>In the preparation servlet, you retrieve the user's operating system information from the request headers. 
+					Based on that information, you redirect the request to either Windows' version or Mac version of the input page.</li>
+					<p></p>
+					<li>You also need to retrieve the initial parameters from the <tt>web.xml</tt> for the city data and 
+					the tax rate data, so as to calculate the product price later. The city data is stored in a string
+					array, and put in the request scope.</li>
+					<p></p>
+					<li>The user's input page will display the city options as a dropdown list, so that the user can
+					select the suitable city for the product.</li>
+					<p></p>
+					<li>(<i>Product Simulation</i>) In order to practice data processing in a servlet, we use a computation
+					task which has its own value to simulate the product. The computation task is to factorize a big
+					integer as the product of its prime factors with the following details:</li>
+					<p></p>
+					<ul>
+					   <li>The user can enter a big integer in the input page to request the decomposition service.
+					   After the user clicks the <b>submit</b> button, it is sent to our data processing servlet for
+					   decomposition.</li>
+					   <p></p>
+					   <li>You need to validate your data. If the string is not formed by digits, an error message is
+					   displayed on the page. Only when the data is valid, you do the following data processing.</li>
+					   <p></p>
+					   <li>In the servlet, you can use Java's <tt>BigInteger</tt> class to do operations for big integers.
+					   (<i>An example for calculating Java BigIntegers is included with this project</i>.)
+					   The output is one of the two cases: 
+					   <p></p>
+					   <ol>
+					      <li>If the input number is a prime, just output a message showing that it is a prime;</li>
+						  <p></p>
+						  <li>If the input number is not a prime and it is an odd integer, write it as a product of 
+						  two smaller odd integers;</li>
+						  <p></p>
+						  <li>If the input number is not a prime and it is an even integer, first extract the largest
+						  power of 2, then for the remaining odd number, try to factorize it if you can. For your 
+						  output, you give the power of 2 as one number and one more factor if this factor is a prime,
+						  or two more factors if you can still factorize the odd number after extracting the power of 2.</li>
+					   </ol></li>
+					   <p></p>
+					   <li>If you can find any efficient prime factorization algorithm, you can use it. The performance 
+					   of your algorithm will not be used as a factor in grading.</li>
+					   <p></p>
+					   <li>Now we need to <i>simulate</i> the service cost. We simply take the last two digits of the
+					   largest factor in your factorization as the service cost, and the service charge (before adding
+					   the tax) is just that two-digit number of dollars.</li>
+					   <p></p>
+					</ul>
+					<li>(<i>Display Result</i>) You forward the page to another JSP to display the factorization result 
+					with the decomposition stored in the request scope.</li>
+					<p></p>
+					<li>(<i>Display Invoice</i>) Below the computation result, you also display the invoice of this computing task
+					by adding the state tax on top of the service charge. (Note here we use the service to simulate the product.)</li>
+					<p></p>
+					<li>Put a <b>Home</b> link on the result page for the user to go back to the input page to purchase another
+					product.</li>
+					<p></p>
+					<p></p>
+				</ol>
+            <table>
+                <tr><td class="ht1a">&nbsp;</td></tr>
+				<tr><td class="ht1a">&nbsp;</td></tr>
+            </table>
+            <center><span style="color: #D20106;">==========The End==========</span></center>
+        </div>
+    </body>
+</html>

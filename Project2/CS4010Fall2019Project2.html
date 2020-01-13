@@ -1,0 +1,162 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>CS4010 Fall 2019: Project 2. Math Question Bank</title>
+        <style type="text/css">
+            body {
+                color: #333333;
+                margin: 0 auto;
+                font-size: 1em;
+                font-family: Verdana, "Verdana CE",  Arial, "Arial CE", "Lucida Grande CE", lucida, "Helvetica CE", sans-serif;
+                text-align: center;
+            }
+            h1 {
+                font-size: 1.6em;
+                color: #333;
+                font-weight : normal;
+                padding:10px;
+                margin: 20px 10px 10px 0px;
+                text-align:center;
+            }
+            h2 {
+                font-size: 1.3em;
+                color: black;
+                font-weight : normal;
+                padding:5px 0px 2px 0px;
+                margin:0px 0px 5px 0px;
+                border-bottom:1px solid #D1d1d1;
+                text-align:left;
+            }
+            .baseFont {
+                font-size: 1.1em;
+                font-family: helvetica, arial, sans-serif;
+            }
+            .linegap1 {
+                line-height: 160%
+            }
+            .indent {
+                position: relative;
+                left: 1em;
+                width: 45em;
+            }
+            .ht1 {
+                height: 4em;
+            }
+            .ht1a {
+                height: 1em;
+            }
+            .inframe {
+                border: 2px solid;
+                position:relative;
+                margin: 0 auto;
+                top: 5px;
+                color: black;
+                border-color: #00BFFF;
+                width: 50em;
+                display: block;
+                padding: 1.5em;
+                text-align: left;
+                background-color: #FFF;
+            }
+            pre {
+                background-color:#FFF8E4;
+                padding:10px;
+                font-size: 1.3em;
+                _font-size: 1.2em;
+            }
+            pre,samp,code,tt {
+                font-family: "Courier New", monospace;
+                font-size:1.1em;
+                color:black;
+            }
+            .examplecode  {
+                background-color:#FFF8E4;
+                overflow:auto;
+                width:95%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="inframe baseFont linegap1">
+            <h1>Project 2. Math Question Bank</h1>
+			<center>(Due 11/17/2019)</center>
+            <table>
+                <tr><td class="ht1a">&nbsp;</td></tr>
+            </table>
+                <p></p>
+                <p></p>
+                <h2>Description</h2>
+                <p></p>
+                <p></p>
+				<div class="indent linegap1">
+                    In this project, you build a math question bank by entering math questions into a database. 
+					You can also create a list of categories, such as <tt>Algebra, Geometry, Trigonometry</tt>, etc. 
+					For each math question, you can assign it to one of the categories. Then you can list all the questions 
+					in any category.
+				</div>
+				<table>
+                   <tr><td class="ht1a">&nbsp;</td></tr>
+                </table>
+                <h2>Requirements</h2>
+                <p></p>
+				<ul>
+				   <li><b>Database</b></li>
+				   <p></p>
+				   <ol><li>You need to create a table to store all the math questions.</li>
+				   <p></p>
+				   <li>You need to create a table to store all the categories.</li>
+				   <p></p>
+				   <li>You need to create a table to store the mappings between the math questions and the categories
+				   through their IDs.</li>
+				   </ol>
+				   <p></p>
+				   <p></p>
+				   <li><b>Users' interface</b></li>
+				   <p></p>
+					Based on your own understanding, you design your users' interface. The basic consideration is:
+					Your UI should support all the features in this project. 
+					<p></p>
+				    <p></p>
+					<li><b>Features</b></li>
+					<p></p>
+					<ol><li>When a user comes to the web application, you display the whole page of the math questions.
+					For simplicity, we do not require you use pagination to display questions in multiple pages &minus; all
+					in one page.</li>
+					<p></p>
+					<li>There is a textarea on the page so that any user can enter a math question into the database.</li>
+					<p></p>
+					<li>When a question is entered, you need to makes sure that it is not empty (as our data validation).</li>
+					<p></p>
+					<li>You also need to provide an input field to allow the users to enter a new category.</li>
+					<p></p>
+					<li>When a user enters a new category, check if it already exists in the table. If it exists, do not duplicate it.
+					Only when it is a new category and it is not an empty string, write it into the table.</li>
+					<p></p>
+					<li>For each math question, associate it with a dropdown list of the categories and an <b>Assign</b> button. When the
+					user selects a category, and clicks the <b>Assign</b> button, this question belongs to this category.</li>
+					<p></p>
+					<li>If a question has been assigned to a category, find a way to mark this assignment to make the user aware of it,
+					so as to avoid the user putting a question into the same category twice.</li>
+					<p></p>
+					<li>On top of the page, list all the categories as menu items. When a category is selected, only the questions in this
+					category are listed.</li>
+					<p></p>
+					</ol>
+					<p></p>
+				    <p></p>
+					<li><b>Submission</b></li>
+					<p></p>
+					For early submission, you still get up to 1% extra credit.
+					<p></p>
+				</ul>
+            <table>
+                <tr><td class="ht1a">&nbsp;</td></tr>
+				<tr><td class="ht1a">&nbsp;</td></tr>
+            </table>
+            <center><span style="color: #D20106;">==========The End==========</span></center>
+        </div>
+    </body>
+</html>

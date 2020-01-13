@@ -1,0 +1,9 @@
+# Ignore Eclipse files and TomCat server files
+.metadata
+/Servers
+
+# Ignore specific project misc. files
+*/.settings
+*/build
+*/.classpath
+*/.project
