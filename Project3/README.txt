@@ -44,7 +44,7 @@ Features
 
 HOW TO RUN
 ----------------------------------------------------------------------------------------------------
-1. Enable Apache and MySQL in XAMPP Control Panel (v3.2.3 or above).
+1. Enable Apache and MySQL in XAMPP Control Panel (XAMPP Version: v5.5.19 or above).
 2. Head to phpMyAdmin main page: http://localhost/phpmyadmin/index.php
 3. Click on SQL tab and run [init.sql] by copy and paste into the text field and click on "Go".
 4. Run the project in Eclipse IDE: Right click on Project3 > Run As > Run on Server > Choose your server > Next > Add Project3 to Configured > Finish
